@@ -13,7 +13,7 @@ end
 # Create
 post '/notes' do
   Note.create(params[:note])
-  erb :index
+  redirect '/'
 end
 
 # Read
