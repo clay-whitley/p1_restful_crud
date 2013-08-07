@@ -1,0 +1,9 @@
+<div class="container">
+  <h4><%= @note.title %></h4>
+  <p><%= @note.content %></p>
+  <%= "<a href='/notes/edit/#{@note.id}'>Edit note...</a>" %>
+  <form action=<%= "/notes/#{@note.id}" %> method="post">
+    <input type="submit" value="Delete note..." />
+    <input type="hidden" name="_method" value="delete" />
+  </form>
+</div>
